@@ -1,0 +1,29 @@
+---
+import Navigation from '../components/Navigation.astro';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>FreePub - A Space for Free Expression</title>
+	</head>
+	<body class="min-h-screen bg-gray-50">
+		<Navigation />
+		<slot />
+		<footer class="bg-white border-t mt-16">
+			<div class="max-w-4xl mx-auto px-4 py-6 text-center text-gray-600">
+				<p>© {new Date().getFullYear()} FreePub. All rights reserved.</p>
+			</div>
+		</footer>
+	</body>
+</html>
+
+<style is:global>
+	html {
+		font-family: system-ui, sans-serif;
+	}
+</style>
